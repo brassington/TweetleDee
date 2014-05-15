@@ -12,13 +12,14 @@ if (sessionStorage.length) {
     sessionStorage.setItem(0, JSON.stringify(tweet));
 }
 
-// Example of reading values out of session storage, then looping through localstorage next
-for (var propName in sessionStorage) {
-    document.getElementById("container").innerHTML +=
-    JSON.parse(sessionStorage[propName])["name"] +
-    ': ' +
-    JSON.parse(sessionStorage[propName])["message"] + "<br />";
-}
+// NOT REQUIRED: Example of reading values out of session storage, then looping through localstorage to show the latest from both session and local all at once.
+//for (var propName in sessionStorage) {
+//    document.getElementById("container").innerHTML +=
+//    JSON.parse(sessionStorage[propName])["name"] +
+//    ': ' +
+//    JSON.parse(sessionStorage[propName])["message"] + "<br />";
+//}
+
 // Now reading values out of localstorage, so that it will eventually get updated from firebase when the FirebaseService kicks off every 15 seconds.
 for (var propName in localStorage) {
     document.getElementById("container").innerHTML +=
