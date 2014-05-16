@@ -68,6 +68,7 @@
     <Content Include="getpostFirebaseService.js" />
     <Content Include="index.html" />
     <Content Include="main.js" />
+    <Content Include="shortcuts.js" />
     <Content Include="styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
