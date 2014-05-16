@@ -3,9 +3,11 @@
 // You can add any object to sessionStorage and it will get sent the next time the service runs.
 // Read out the latest firebase objects from localStorage (anything written to localstorage will be erased
 //   every 15 seconds)
+"use strict";
 
 //Function which handles sending new sessionStorage objects to Firebase
 var postTweet = function () {
+    "use strict";
     for (var i = 0; i < sessionStorage.length; i++) {
         var request = new XMLHttpRequest();
         request.open("POST", "https://luminous-fire-7183.firebaseio.com/.json", true);
@@ -32,6 +34,7 @@ var postTweet = function () {
 
 // Function which handles updating our localStorage from firebase every 15 seconds
 var getFireBaseData = function () {
+    "use strict";
     var request = new XMLHttpRequest();
     request.open("GET", "https://luminous-fire-7183.firebaseio.com/.json", true);
     request.onload = function () {

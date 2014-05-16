@@ -1,4 +1,5 @@
 ﻿//New fake tweet that I'll keep sending in to firebase the first time the page loads.
+"use strict";
 
 var tweet = {
     name: "Andrew",
